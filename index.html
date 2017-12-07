@@ -4,17 +4,35 @@
     <meta charset="utf-8">
     <title>GroupMaker - TIB</title>
     <link rel="stylesheet" href="vendor/materialize.min.css">
+    <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
 
     <script src="vendor/jquery-3.2.0.min.js"></script>
     <script src="vendor/materialize.min.js"></script>
+
+    <style>
+        #logo {
+            height: 25px;
+            width: 25px;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+
+        #created {
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
   </head>
   <body>
-      <nav class="blue-grey darken-3">
+      <nav class="blue accent-4">
           <div class="nav-wrapper">
-              <a href="/" class="brand-logo"><i class="fa fa-github-alt"></i>GroupMaker TIB</a>
+              <a href="/" class="brand-logo">GroupMaker TIB <i class="fa fa-angellist"></i></a>
               <a data-activates="main-menu" class="button-collapse">
                   <i class="fa fa-bars"></i>
               </a>
+              <ul class="right hide-on-small-only">
+                  <li><img src="logo.png" alt="Vue.js" id="logo"></li>
+              </ul>
           </div>
       </nav>
     <div id="app"></div>

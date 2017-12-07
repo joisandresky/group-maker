@@ -10,6 +10,11 @@
 
 <script>
 export default {
+  data () {
+    return {
+      logoLink: './assets/logo.png'
+    }
+  },
   computed: {
     mhs(){
       return this.$store.getters.getMahasiswa
