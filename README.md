@@ -1,18 +1,17 @@
-# tib-gm
+# Project Title
 
-> Group Maker
+GroupMaker TIB
 
-## Build Setup
+## Project Description
 
-``` bash
-# install dependencies
-npm install
+Project ini adalah Project sederhana untuk Membuat Pembagian Kelompok Belajar yang digunakan Oleh Mahasiswa STMIK Bani Saleh TIB 2015
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Project Detail
 
-# build for production with minification
-npm run build
-```
+Project ini menggunakan Vue.js dan Untuk Back-end nya menggunakan Firebase dengan Firestore.
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+``
+
+## Authors
+
+* **Jois Andresky** - *Initial work* - [JoisAndresky](https://github.com/joisandresky)
