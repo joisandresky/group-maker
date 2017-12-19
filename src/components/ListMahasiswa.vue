@@ -29,8 +29,7 @@ import db from '../firebaseInit'
 export default {
   data () {
     return {
-      mahasiswa: [],
-      loading: false
+      mahasiswa: []
     }
   },
   created () {
@@ -45,11 +44,6 @@ export default {
         this.mahasiswa.push(data)
       })
     })
-    // this.$store.dispatch('setMahasiswa', this.mahasiswa)
-  },
-  methods: {
-    
   }
 }
 </script>
-

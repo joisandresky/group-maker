@@ -1,11 +1,11 @@
 <template>
 <div id="kelompok" class="row">
-  <div class="col s12 m4" v-for="(klp, index) in groups">
+  <div class="col s12 m4" v-for="(klp, index) in groups" :key="index">
     <div class="card blue darken 1">
         <div class="card-content black-text">
         <span class="card-title">Kelompok {{index +1}}</span>
         <ul class="collection">
-            <li class="collection-item" v-for="m in klp">{{ m.nama }}</li>
+            <li class="collection-item" v-for="m in klp" :key="m.npm">{{ m.nama }}</li>
         </ul>
         </div>
     </div>

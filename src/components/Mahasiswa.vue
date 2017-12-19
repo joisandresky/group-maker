@@ -3,12 +3,14 @@
       <p>Total Mahasiswa: {{total}}</p>
         <h3>List Mahasiswa</h3>
         <ul class="collection">
-          <li class="collection-item" v-for="maba in mhs">{{maba.nama}} - {{maba.npm}}</li>
+          <li class="collection-item" v-for="maba in mhs" :key="maba.npm">{{maba.nama}} - {{maba.npm}}</li>
         </ul>
   </div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
+
 export default {
   data () {
     return {
@@ -16,9 +18,12 @@ export default {
     }
   },
   computed: {
-    mhs(){
-      return this.$store.getters.getMahasiswa
-    },
+    ...mapState([
+      'mhs'
+    ]),
+    // mhs(){
+    //   return this.$store.getters.getMahasiswa
+    // },
     total(){
       return this.$store.getters.getTotalMhs
     }

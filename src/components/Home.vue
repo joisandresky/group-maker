@@ -15,7 +15,7 @@
         <kelompok></kelompok>
       </div>
       <div class="col s4">
-          <mahasiswa></mahasiswa>
+        <mahasiswa></mahasiswa>
       </div>
     </div>
   </div>
@@ -24,12 +24,29 @@
 <script>
 import Mahasiswa from './Mahasiswa.vue'
 import Kelompok from './Kelompok.vue'
+import db from '../firebaseInit'
 
 export default {
   data () {
       return {
-          max_org: ''
+          max_org: '',
+          mhs: []
       }
+  },
+  created () {
+    db.collection('mahasiswa').get().then(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        const data = {
+          id: doc.id,
+          npm: doc.data().npm,
+          nama: doc.data().nama,
+          done: doc.data().done
+        }
+
+        this.mhs.push(data)
+      })
+      this.$store.dispatch('setMhs', this.mhs)
+    })
   },
   components: {
       Mahasiswa,
